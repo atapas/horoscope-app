@@ -170,6 +170,8 @@ class _HomePageState extends State<HomePage> {
         arguments: ScreenArguments(
           'Prediction',
           horoscope.horoscope,
+          predictionData.getFullName(),
+          zodiacSign
         ),
       );
 

@@ -22,27 +22,55 @@ class _ResultPageState extends State<ResultPage> {
       ),
       body: new Center(
         child: new ListView(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0),
           children: <Widget>[
-            new Text(
-                args.message
+            /*new IconButton(icon: Icon(Icons.monetization_on)),*/
+            new RichText(
+              text: new TextSpan(
+                  text: 'Hello ' + args.name.trim() +', Your Zodiac Sign is: ' + args.sign,
+                  style: new TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.black,
+                  )
+              ),
             ),
-            new RaisedButton(onPressed:(){
-              goToHomePage(context);
-            } ,child: new Text("Back to Home Page"),)
+            new Image(
+              image: new AssetImage("assets/" + args.sign.toLowerCase() + ".png"),
+              fit: BoxFit.none
+            ),
+            
+            new RichText(
+              text: new TextSpan(
+                  text: 'Your Horoscope goes like:\n',
+                  style: new TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  )
+              ),
+            ),
+            
+            new RichText(
+              text: new TextSpan(
+                  text: args.message + '\n',
+                  style: new TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.black,
+                    fontFamily: 'Proxima Nova'
+                  )
+              ),
+            ),
+
+            new RaisedButton(
+              onPressed:(){
+                goToHomePage(context);
+              } ,
+              child: new Text(
+                "Back to Home Page"
+              ),
+            )
           ]
         )
-        
-        
-        /*new Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            new RaisedButton(onPressed:(){
-              goToHomePage(context);
-            } ,child: new Text("Back to Home Page"),)
-          ],
-        ),*/
       ) ,
     );
   }
