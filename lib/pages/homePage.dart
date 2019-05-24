@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 
-import 'dart:async' show Future;
 import 'dart:convert';
 
 import '../models/preditctionModel.dart';
@@ -24,21 +23,22 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final GlobalKey<FormState> _formKey = new GlobalKey<FormState>();
+  bool _autoValidate = false;
   List<String> _allDurations = <String>['', 'Today', 'Week', 'Month', 'Year'];
   
   String _duration = '';
   final nameController = TextEditingController();
   final dobController = TextEditingController();
-  final phoneController = TextEditingController();
-  final emailController = TextEditingController();
+  // final phoneController = TextEditingController();
+  // final emailController = TextEditingController();
 
   @override
   void dispose() {
     // Clean up the controller when the Widget is disposed
     nameController.dispose();
     dobController.dispose();
-    phoneController.dispose();
-    emailController.dispose();
+    // phoneController.dispose();
+    // emailController.dispose();
     super.dispose();
   }
 
@@ -53,10 +53,15 @@ class _HomePageState extends State<HomePage> {
           bottom: false,
           child: new Form(
               key: _formKey,
-              autovalidate: true,
+              autovalidate: _autoValidate,
               child: new ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16.0 ),
                 children: <Widget>[
+                  new Image(
+                    image: new AssetImage("assets/astrology.png"),
+                    fit: BoxFit.none
+                  ),
+
                   new TextFormField(
                     controller: nameController,
                     decoration: const InputDecoration(
@@ -65,6 +70,7 @@ class _HomePageState extends State<HomePage> {
                       labelText: 'Name',
                     ),
                   ),
+                  
                   new TextFormField(
                     controller: dobController,
                     decoration: const InputDecoration(
@@ -74,7 +80,8 @@ class _HomePageState extends State<HomePage> {
                     ),
                     keyboardType: TextInputType.datetime,
                   ),
-                  new TextFormField(
+                  
+                  /*new TextFormField(
                     controller: phoneController,
                     decoration: const InputDecoration(
                       icon: const Icon(Icons.phone),
@@ -85,8 +92,9 @@ class _HomePageState extends State<HomePage> {
                     inputFormatters: [
                       WhitelistingTextInputFormatter.digitsOnly,
                     ],
-                  ),
-                  new TextFormField(
+                  ),*/
+                  
+                  /*new TextFormField(
                     controller: emailController,
                     decoration: const InputDecoration(
                       icon: const Icon(Icons.email),
@@ -94,7 +102,8 @@ class _HomePageState extends State<HomePage> {
                       labelText: 'Email',
                     ),
                     keyboardType: TextInputType.emailAddress,
-                  ),
+                  ),*/
+                  
                   new FormField(
                     builder: (FormFieldState state) {
                       return InputDecorator(
@@ -124,20 +133,30 @@ class _HomePageState extends State<HomePage> {
                       );
                     },
                   ),
+                  
                   new Container(
                       padding: const EdgeInsets.only(left: 40.0, top: 20.0),
                       child: new RaisedButton(
                         child: const Text('Submit'),
                         onPressed: () {
-                          processInput(
-                            new PredictionData(nameController.text
-                              , dobController.text
-                              , phoneController.text
-                              , emailController.text
-                              , _duration)
+                          if (_formKey.currentState.validate()) {
+                            processInput(
+                              new PredictionData(nameController.text
+                                , dobController.text
+                                , /* phoneController.text */ '1234567890'
+                                , /* emailController.text */ 'abcd@efgh.com'
+                                , _duration)
                             );
+                          } else {
+                              // If all data are not valid then start auto validation.
+                            setState(() {
+                              _autoValidate = true;
+                            });
+                          }
                         },
                       )),
+                      
+                      
                 ],
               ))),
     );
@@ -174,17 +193,6 @@ class _HomePageState extends State<HomePage> {
           zodiacSign
         ),
       );
-
-    /*showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            // Retrieve the text the user has typed in using our
-            // TextEditingController
-            content: Text(horoscope.horoscope),
-          );
-        },
-      );*/
   }
 
 }
