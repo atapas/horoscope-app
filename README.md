@@ -24,11 +24,13 @@ samples, guidance on mobile development, and a full API reference.
 
 ### Screens
 
-<img src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" align="center" style="max-width: 250px!important;">
-<img src="https://github.com/atapas/horoscope-app/raw/master/screens/2.jpg" align="center" style="max-width: 250px!important;">
-<img src="https://github.com/atapas/horoscope-app/raw/master/screens/3.jpg" align="center" style="max-width: 250px!important;">
-<img src="https://github.com/atapas/horoscope-app/raw/master/screens/4.jpg" align="center" style="max-width: 250px!important;">
- 
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" data-canonical-src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" width="200" height="400" />
+
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/2.jpg" data-canonical-src="https://github.com/atapas/horoscope-app/raw/master/screens/2.jpg" width="200" height="400" />
+
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/3.jpg" data-canonical-src="https://github.com/atapas/horoscope-app/raw/master/screens/3.jpg" width="200" height="400" />
+
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/4.jpg" data-canonical-src="https://github.com/atapas/horoscope-app/raw/master/screens/4.jpg" width="200" height="400" />
 
 # Short Demo
 [Prediction App Demo](https://www.youtube.com/watch?v=ZLYFX18TQCA)
