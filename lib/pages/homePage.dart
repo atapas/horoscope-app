@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                     builder: (FormFieldState state) {
                       return InputDecorator(
                         decoration: InputDecoration(
-                          icon: const Icon(Icons.color_lens),
+                          icon: const Icon(Icons.timer),
                           labelText: 'Duration',
                         ),
                         isEmpty: _duration == '',
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                   new Container(
                       padding: const EdgeInsets.only(left: 40.0, top: 20.0),
                       child: new RaisedButton(
-                        child: const Text('Submit'),
+                        child: const Text('Go for it!'),
                         onPressed: () {
                           if (_formKey.currentState.validate()) {
                             processInput(
