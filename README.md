@@ -22,6 +22,19 @@ samples, guidance on mobile development, and a full API reference.
 - flutter build apk
 - flutter install -d DXEXXXXXXXXXXX [Where DXEXXXXXXXXXXX is your Device ID]
 
+### Screens
+
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" align="center" style="max-width: 250px!important;">
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/2.jpg" align="center" style="max-width: 250px!important;">
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/3.jpg" align="center" style="max-width: 250px!important;">
+<img src="https://github.com/atapas/horoscope-app/raw/master/screens/4.jpg" align="center" style="max-width: 250px!important;">
+ 
+
+# Short Demo
+[Prediction App Demo](https://www.youtube.com/watch?v=ZLYFX18TQCA)
+
+
+
 ## Credits
 
 - <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 		    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 		    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> 
