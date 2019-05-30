@@ -1,6 +1,6 @@
 # Prediction
 
-A new Flutter project to build an app that has basic layout, routing and server communication over REST APIs. What would be better than knowing your Horoscope in real! If you like the work, please encourage with a *(star)
+A new Flutter project to build an app that has basic layout, routing and server communication over REST APIs. What would be better than knowing your Horoscope in real! If you liked the work, please encourage with a *(star)
 
 ## Getting Started
 
