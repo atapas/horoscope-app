@@ -22,6 +22,10 @@ samples, guidance on mobile development, and a full API reference.
 - flutter build apk
 - flutter install -d DXEXXXXXXXXXXX [Where DXEXXXXXXXXXXX is your Device ID]
 
+### Blog
+
+https://blog.greenroots.info/experience-sharing-on-developing-a-near-realistic-beautiful-mobile-app-in-record-time-using-flutter-cjwb25ql2000efvs1ofac4azo
+
 ### Screens
 
 <img src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" data-canonical-src="https://github.com/atapas/horoscope-app/raw/master/screens/1.jpg" width="200" height="400" />
